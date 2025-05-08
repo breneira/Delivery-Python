@@ -8,7 +8,7 @@ while True:
     print("3. Ver clientes")
     print("4. Ver cardápio")
     print("5. Sair")
-
+    print("6. Limpar listas")
     opcao = input("Escolha: ")
 
     if opcao == "1":
@@ -25,5 +25,12 @@ while True:
         listar_produtos()
     elif opcao == "5":
         break
+    elif opcao == "6":
+        from cliente import clientes
+        from cardapio import produtos
+        clientes.clear()
+        produtos.clear()
+        print("Listas esvaziadas com sucesso.")
+        
     else:
         print("Opção inválida.")
